@@ -1,21 +1,30 @@
 <%= form_with model: article do |form| %>
-  <div>
-    <%= form.label :title %><br>
-    <%= form.text_field :title %>
+  <div class="mb-3 text-center lead">
+    
+    <label  for="exampleInput" class="form-label">Title</label>
+
+    <br>
+    
+    <%= form.text_field :title, class:"form-control", type:"text" %>
     <% article.errors.full_messages_for(:title).each do |message| %>
       <div><%= message %></div>
     <% end %>
   </div>
-  
-  <div>
-    <%= form.label :body %><br>
-    <%= form.text_area :body %><br>
+
+  <br>
+
+  <div class="mb-3 text-center lead">
+
+    <label for="exampleFormControlTextarea1" class="form-label">Body</label>
+
+    <br>
+    <%= form.text_area :body, class: "form-control" %>
     <% article.errors.full_messages_for(:body).each do |message| %>
       <div><%= message %></div>
     <% end %>
   </div>
 
-  <div>
-    <%= form.submit %>
+  <div class="d-grid gap-2">
+    <button type="submit" class="btn btn-outline-primary">Submit</button>
   </div>
 <% end %>
