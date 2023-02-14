@@ -1,11 +1,11 @@
-<h1 class="text-center">Articles</h1>
+<h1 class="text-center mb-4">Articles</h1>
 
-<br>
-
-<div class="row" style="justify-content: space-between;">
+<div class="row justify-content-start m-2">
   <% @articles.each do |article| %>
-    <div class="card col-4" style="width: 24rem; margin-bottom: 2rem; box-sizing: content-box;">
-      <img src="https://tinypng.com/images/social/website.jpg" class="card-img-top" alt="..." style="padding-top: 12px;">
+    <div class="card col-4 mb-4 m-2" style="width: 24rem; box-sizing: content-box;">
+      <%= link_to article do %>
+        <img src="https://tinypng.com/images/social/website.jpg" class="card-img-top" alt="..." style="padding-top: 12px;">
+      <% end %>
       <div class="card-body">
         <h5 class="card-title"><%= article.title %></h5>
         <p class="card-text"><%= article.body %></p>
@@ -16,8 +16,5 @@
     </div>
   <% end %>
 </div>
-
-
-<br>
 
 <%= link_to "New Article", new_article_path, class:"btn btn-outline-primary" %>
