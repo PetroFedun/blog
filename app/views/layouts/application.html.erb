@@ -8,9 +8,19 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <style>
+      .container {
+        margin-top: 20px;
+        line-height: 1.8;
+      }
+    </style>
   </head>
 
   <body>
-    <%= yield %>
+    <div class='container'>
+      <%= render 'layouts/header' %>
+      <%= yield %>
+      <%= render 'layouts/footer' %>
+    </div>  
   </body>
 </html>
