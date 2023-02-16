@@ -1,19 +1,19 @@
 <%= form_with model: [ @article, @article.comments.build ] do |form| %>
-  <p>
-    <%= form.label :commenter, for:"exampleInputEmail1", class:"form-label" %><br>
+  <div>
+    <%= form.label :commenter, for:"exampleInputEmail1", class:"form-label" %>
     <%= form.text_field :commenter, class:"form-control", id:"exampleInputEmail1" %>
-  </p>
-  <p>
-    <%= form.label :body, for:"exampleFormControlTextarea1", class:"form-label" %><br>
-    <%= form.text_area :body, class:"form-control", id:"exampleFormControlTextarea1", rows:"3" %>
-  </p>
+  </div>
+  <div>
+    <%= form.label :body, for:"exampleFormControlTextarea1", class:"form-label" %>
+    <%= form.text_area :body, class:"form-control", id:"exampleFormControlTextarea1", rows:"5" %>
+  </div>
 
   <div>
-    <%= form.label :status %><br>
+    <%= form.label :status %>
     <%= form.select :status, %w[public private archived], selected: 'public' %>
   </div>
-  
-  <p>
-    <%= form.submit class:"btn btn-primary" %>
-  </p>
+
+  <div>
+    <%= form.submit class:"btn btn-primary mt-3" %>
+  </div>
 <% end %>
