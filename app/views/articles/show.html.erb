@@ -10,13 +10,13 @@
                   } %></li>
 </ul>
 
-<div class="d-flex justify-content-around" style="padding-top: 50px;">
-  <div class="mb-3"> 
+<div class="row" style="padding-top: 50px; padding-right: 12">
+  <div class="col-12 col-lg-6 mb-3 mx-auto"> 
     <h2>Add a comment</h2> 
     <%= render 'comments/form' %> 
   </div>
 
-  <div class="mb-3"> 
+  <div class="col-12 col-lg-6 mb-3 mx-auto"> 
     <h2>Comments</h2>
     <%= render @article.comments %> 
   </div> 

@@ -10,7 +10,7 @@
 
   <div>
     <%= form.label :status %>
-    <%= form.select :status, %w[public private archived], selected: 'public' %>
+    <%= form.select(:status, %w[public private archived], {selected: params[:status]}, {class: 'form-select'}) %>
   </div>
 
   <div>
