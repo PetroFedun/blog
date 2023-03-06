@@ -1,23 +1,27 @@
-<h1 class="text-center mb-5"><%= @article.title %></h1>
+<h1 class="mb-5"><%= @article.title %></h1>
 
-<p><%= @article.body %></p>
+<p class="w-75 h-auto border lh-lg py-2 px-1"><%= @article.body %></p>
 
 <ul>
   <li class="btn btn-primary"><%= link_to "Edit", edit_article_path(@article) %></li>
-  <li class="btn btn-danger"><%= link_to "Destroy", article_path(@article), data: {
-                    turbo_method: :delete,
-                    turbo_confirm: "Are you sure?"
-                  } %></li>
+  <li class="btn btn-danger">
+  <%= link_to "Destroy", article_path(@article),
+                         data: {
+                           turbo_method: :delete,
+                           turbo_confirm: "Are you sure?"
+                         } %>
+  </li>
 </ul>
 
-<div class="row" style="padding-top: 50px; padding-right: 12">
-  <div class="col-12 col-lg-6 mb-3 mx-auto"> 
-    <h2>Add a comment</h2> 
-    <%= render 'comments/form' %> 
-  </div>
-
+<div class="row flex-row-reverse" style="padding-top: 50px; padding-right: 12">
   <div class="col-12 col-lg-6 mb-3 mx-auto"> 
     <h2>Comments</h2>
     <%= render @article.comments %> 
   </div> 
+
+  <div class="col-12 col-lg-6 mb-3 mx-auto"> 
+    <h2>Add a comment</h2> 
+    <%= render 'comments/form' %> 
+  </div>
 </div>
+

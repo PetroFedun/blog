@@ -4,7 +4,7 @@
   <% @articles.each do |article| %>
     <div class="card col-12 col-sm-6 mb-4 m-2 mx-auto" style="width: 24rem; box-sizing: content-box;">
       <%= link_to article do %>
-        <img src="<%= asset_path('img_1.jpg') %>" class="card-img-top" alt="..." style="padding-top: 12px;">
+        <img src="<%= asset_path('panda.jpg') %>" class="card-img-top" alt="..." style="padding-top: 12px;">
       <% end %>
       <div class="card-body">
         <h5 class="card-title"><%= article.title.truncate(70, omission: '...') %></h5>
