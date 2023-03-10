@@ -1,23 +1,23 @@
 <div class="container py-3 mt-5 p-5 border" id="newform">
-<%= form_with model: article do |form| %>
-  <div class="mb-3">   
-    <%= form.label :title, for:"exampleInput", class:"form-label mb-3" %>
-    <%= form.text_field :title, class:"form-control bg-light", type:"text" %>
-    <% article.errors.full_messages_for(:title).each do |message| %>
-      <div><%= message %></div>
-    <% end %>
-  </div>
+  <%= form_with model: article do |form| %>
+    <div class="mb-3">   
+      <%= form.label :title, for:"exampleInput", class:"form-label mb-3" %>
+      <%= form.text_field :title, class: "form-control bg-light", type:"text" %>
+      <% article.errors.full_messages_for(:title).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
 
-  <div class="mb-3">
-    <%= form.label :body, for:"exampleFormControlTextarea1", class:"form-label mb-3 " %>
-    <%= form.text_area :body, class: "form-control bg-light", rows:"5" %>
-    <% article.errors.full_messages_for(:body).each do |message| %>
-      <div><%= message %></div>
-    <% end %>
-  </div>
+    <div class="mb-3">
+      <%= form.label :body, for:"exampleFormControlTextarea1", class:"form-label mb-3 " %>
+      <%= form.text_area :body, class: "form-control bg-light", rows:"5" %>
+      <% article.errors.full_messages_for(:body).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
 
-  <div>
-    <%= form.submit class:"btn btn-primary mt-3" %>
-  </div>
-<% end %>
+    <div>
+      <%= form.submit class:"btn btn-primary mt-3" %>
+    </div>
+  <% end %>
 </div>

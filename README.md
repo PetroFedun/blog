@@ -21,6 +21,6 @@ $ rails server
 ```
 ## Description
 
-A simple Blog where you can create, edit, delete, add to favorites posts, and view list posts. On the "show" page, you can add comments to post.
+A simple Blog where you can create, edit, delete, and view list posts. On the "show" page, you can add comments to post.
 
 

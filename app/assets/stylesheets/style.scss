@@ -1,3 +1,24 @@
+/* universal */
+
+.container {
+  line-height: 2;
+}
+
+a, a:hover, a:active { 
+  text-decoration: none; 
+  color: #fff; 
+}
+
+.title {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  border-bottom: 1px solid rgba(207, 207, 207, 0.6);
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* header */
 
 #logo {
@@ -19,6 +40,8 @@
     text-decoration: none;
   }
 }
+
+/* footer */
 
 footer {
   margin-top: 45px;
@@ -44,44 +67,31 @@ footer {
   }
 }
 
-.title {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  text-align: center;
-  border-bottom: 1px solid rgba(207, 207, 207, 0.6);
-  width: 50%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-
-a, a:hover, a:active { 
-  text-decoration: none; 
-  color: #fff; 
-}
-
-.container {
-  line-height: 2;
-}
 #feedbackform{
   width: 75%;
 }
+
 #contact {
  line-height: 2;
 }
+
 #help {
   font-size: 20px;
 }
+
 #articlebody {
   width: 80%;
   font-size: 20px;
 }
+
 #formsign{
   width: 50%;
-} 
+}
+
 #addcommentform{
   width: 45%;
 }
+
 #comment{
   padding-top: 50px;
   padding-right: 12px;
@@ -90,18 +100,23 @@ a, a:hover, a:active {
     margin-bottom: 2rem;
    }
 }
+
 #showimg {
   width: 85%;
   padding-top: 12px;
   display: block;
 }
+
 #newform {
   width: 50%;
 }
+
 #card{
   width: 24rem;
   box-sizing: content-box;
 }
+
+/* Mediaquery */
 
 @media (max-width: 991px) {
   #contact {
@@ -139,6 +154,6 @@ a, a:hover, a:active {
    h2 {
     margin-bottom: 1rem;
     margin-top: 1rem;
-   }}
+   }
+  }
 }
-
