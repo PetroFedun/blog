@@ -18,13 +18,6 @@
       <%= f.password_field :password, autocomplete: "current-password", class:"form-control bg-light" %>
     </div>
 
-    <% if devise_mapping.rememberable? %>
-      <div class="field mb-3 form-check"class="field mb-3 form-check">
-        <%= f.check_box :remember_me, class:"form-check-input" %>
-        <%= f.label :remember_me, class:"form-check-label" %>
-      </div>
-    <% end %>
-
     <%= link_to "Forgot your password?",  new_user_password_path, class: "text-secondary " %>
 
    <div class="actions mt-3" >
