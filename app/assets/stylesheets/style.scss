@@ -43,6 +43,21 @@ a, a:hover, a:active {
   }
 }
 
+/* Dropdown menu */
+
+.dropdown-menu.active {
+  display: block;
+  margin-left: -80px;
+}
+
+.btn-dropdown {
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 9px;
+  margin-right: 9px;
+}
+
 /* footer */
 
 footer {
@@ -157,5 +172,23 @@ footer {
     margin-bottom: 1rem;
     margin-top: 1rem;
    }
+  }
+}
+
+@media (max-width: 800px) {
+  footer {
+    small {
+      display: block;
+      float: none;
+      margin-bottom: 1em;
+    }
+    ul {
+      float: none;
+      padding: 0;
+      li {
+        float: none;
+        margin-left: 0;
+      }
+    }
   }
 }
