@@ -1,10 +1,21 @@
 class ArticlesController < ApplicationController
-
-  http_basic_authenticate_with name: 'dhh', password: 'secret', only: :destroy
+  http_basic_authenticate_with name: 'Petro', password: 'qwerty', only: :destroy
 
   def index
     @articles = Article.all
   end
+
+  def help
+    render 'static_pages/help'
+  end
+
+  def contact
+    render 'static_pages/contact'
+  end
+
+  def about
+    render 'static_pages/about'
+  end  
 
   def show
     @article = Article.find(params[:id])
@@ -32,7 +43,7 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
 
     if @article.update(article_params)
-      redirect_to @article
+      redirect_to @article, notice: "Successfully create"
     else
       render :edit, status: :unprocessable_entity
     end
